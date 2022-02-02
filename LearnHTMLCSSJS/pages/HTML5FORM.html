@@ -79,6 +79,15 @@
                     else emailError.emailContent = "email is Incorrect";
                 })
 
+                const number=document.querySelector('#number');
+                const numberError = document.querySelector('.number-error');
+                number.addEventListener('input',function(){
+                    let numberRegex =RegExp('91 9919819801');
+                    if (numberRegex.test(number,value))
+                        numberError.numberContent ="";
+                    else numberError.numberContent = "email is Incorrect";
+                })
+
             </script>
     </body>
 </html>
