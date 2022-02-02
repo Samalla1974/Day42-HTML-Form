@@ -85,8 +85,18 @@
                     let numberRegex =RegExp('91 9919819801');
                     if (numberRegex.test(number,value))
                         numberError.numberContent ="";
-                    else numberError.numberContent = "email is Incorrect";
+                    else numberError.numberContent = "number is Incorrect";
                 })
+
+                const password=document.querySelector('#password');
+                const passwordError = document.querySelector('.password-error');
+                password.addEventListener('input',function(){
+                    let passwordRegex =RegExp('(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_-])[a-zA-Z0-9].{8,}$');
+                    if (passwordRegex.test(password,value))
+                        passwordError.passwordContent ="";
+                    else passwordError.passwordContent = "password is Incorrect";
+                })
+                
 
             </script>
     </body>
